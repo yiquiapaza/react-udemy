@@ -1,5 +1,9 @@
+import ExpenseForm from "./ExpenseForm";
+
 const NewExpense = () => {
   return <div>
-    <form></form>
+    <ExpenseForm />
   </div>
 };
+
+export default NewExpense;

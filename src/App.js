@@ -1,4 +1,5 @@
 import Expenses from './components/Expenses';
+import NewExpense from './components/NewExpense';
 const App = () => {
   const expenses = [
     {
@@ -23,6 +24,7 @@ const App = () => {
   //Advice, you need to always use **key** when you use map function with Arrays
   return (
     <div>
+      <NewExpense />
       <Expenses expenses={expenses} />
     </div>
   );
