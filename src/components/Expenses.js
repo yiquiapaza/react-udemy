@@ -1,19 +1,22 @@
-import Card from "./Card";
-import ExpenseItem from "./ExpenseItem";
-const Expenses = (props) => {
-	console.log(props);
+import Card from './Card';
+import ExpenseItem from './ExpenseItem';
 
-	let extensesToReader = props.expenses.map((item) => {
-		return (
-			<Card key={item.id}>
-				<ExpenseItem
-					title={item.title}
-					amount={item.amount}
-					date={item.date}
-				/>
-			</Card>
-		);
-	});
-	return <div>{extensesToReader}</div>;
+import './Card.css';
+import './Expenses.css'
+
+const Expenses = (props) => {
+  console.log(props);
+
+  let extensesToReader = props.expenses.map((item) => {
+    return (
+      <ExpenseItem
+        key={item.id}
+        title={item.title}
+        amount={item.amount}
+        date={item.date}
+      />
+    );
+  });
+  return <Card className="expenses">{extensesToReader}</Card>;
 };
 export default Expenses;

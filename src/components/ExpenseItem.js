@@ -1,14 +1,14 @@
-import ExpenseDate from "./ExpenseDate";
+import ExpenseDate from './ExpenseDate';
 const ExpenseItem = (props) => {
-    return (
+  return (
     <div>
-        <div>
-            <ExpenseDate date = {props.date}/>
-            <h2>{props.title}</h2>
-            <div>{props.amount}</div>
-        </div>
+      <div>
+        <ExpenseDate date={props.date} />
+        <h2>{props.title}</h2>
+        <div>{props.amount}</div>
+      </div>
     </div>
-    )
+  );
 };
 
 export default ExpenseItem;
