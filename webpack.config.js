@@ -24,6 +24,10 @@ module.exports = {
           extensions: [".js", ".jsx"],
         },
       },
+      {
+        test: /\.css$/,
+        use:['style-loader', 'css-loader']
+      }
     ]
   },
   devServer: {
