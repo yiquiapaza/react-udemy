@@ -1,7 +1,6 @@
 import Card from './Card';
 import ExpenseDate from './ExpenseDate';
-import './ExpenseItem.css';
-
+import './ExpenseItem.css'
 const ExpenseItem = (props) => {
   return (
     <Card className='expense-item'>

@@ -46,4 +46,3 @@ tab_with = 2
 
 [*.{css}]
 ident_size = tab
-tab_with =
