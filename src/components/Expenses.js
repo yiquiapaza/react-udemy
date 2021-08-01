@@ -13,16 +13,6 @@ const Expenses = (props) => {
     setFilterYear(selectedYear);
   };
 
-  let extensesToReader = props.expenses.map((item) => {
-    return (
-      <ExpenseItem
-        key={item.id}
-        title={item.title}
-        amount={item.amount}
-        date={item.date}
-      />
-    );
-  });
   return (
     <div>
       <Card className='expenses'>
@@ -30,7 +20,14 @@ const Expenses = (props) => {
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
-        {extensesToReader};
+        {props.items.map((item) => (
+          <ExpenseItem
+            key={item.id}
+            title={item.title}
+            amount={item.amount}
+            date={item.date}
+          />
+        ))}
       </Card>
     </div>
   );

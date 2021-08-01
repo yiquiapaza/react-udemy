@@ -19,13 +19,25 @@ const ExpenseForm = (props) => {
     });
   };
   const dateChangedHandler = (event) => {
+    console.log(event.target.value);
     setUserInput((prevState) => {
-      return { ...prevState, enteredDate: event.target.value };
+      return {
+        ...prevState,
+        enteredDate: event.target.value
+      };
     });
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
+    let newDate = new Date(userInput.enteredDate);
+    newDate = new Date(
+      newDate.getFullYear(),
+      newDate.getMonth(),
+      newDate.getDay()
+    );
+    console.log(newDate);
+    console.log(newDate.getFullYear());
     console.log(userInput);
     props.onSaveExpenseData(userInput);
     setUserInput({ enteredTitle: '', enteredAmount: '', enteredDate: '' });
